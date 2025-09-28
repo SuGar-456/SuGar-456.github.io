@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Zibo He｜Augmented & Virtual Reality · XR · HCI · Embedded</title>
+<meta name="description" content="Zibo He portfolio – AR/VR/XR/HCI" />
+<style>
+  :root{--bg:#fff;--fg:#111;--muted:#6b7280;--line:#e5e7eb;--card:#fafafa;}
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .row{height:64px;display:flex;align-items:center;justify-content:space-between}
+  nav a{margin-left:16px;color:var(--fg);text-decoration:none;font-size:14px}
+  nav a:hover{text-decoration:underline}
+  h1{font-size:40px;line-height:1.2;margin:16px 0 8px}
+  h2{font-size:28px;margin:32px 0 16px}
+  .muted{color:var(--muted)}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:1024px){.g3{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.g2,.g3{grid-template-columns:1fr}}
+  .section{padding:48px 0;border-bottom:0}
+  .sec-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
+  .sec-hd a{font-size:12px;color:var(--muted);text-decoration:none}
+  .sec-hd a:hover{text-decoration:underline}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .card .hd{padding:14px 16px;border-bottom:1px solid var(--line);font-weight:600;display:flex;align-items:center;gap:8px}
+  .card .bd{padding:16px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:8px 12px;font-size:14px;border:1px solid #000;background:#000;color:#fff;text-decoration:none;cursor:pointer}
+  .btn.secondary{background:#fff;color:#000;border:1px solid var(--line)}
+  .btn[disabled]{opacity:.5;pointer-events:none}
+  .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin:2px 4px 0 0;font-size:12px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap}
+  .mt-2{margin-top:8px}.mt-3{margin-top:12px}.mt-4{margin-top:16px}.mt-6{margin-top:24px}.mb-3{margin-bottom:12px}
+  .video{width:100%;border-radius:12px;background:#000;overflow:hidden}
+  .badge{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin:2px 8px 0 0;font-size:12px}
+  footer{border-top:1px solid var(--line);margin-top:32px}
+  .toplink{color:var(--muted);text-decoration:none}.toplink:hover{text-decoration:underline}
+  .gallery img{width:100%;height:auto;border-radius:12px;display:block}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(2px);z-index:50;display:none;align-items:center;justify-content:center;padding:16px}
+  .lightbox.open{display:flex}
+  .lb-inner{position:relative;max-width:1120px;width:100%}
+  .lb-img{width:100%;height:auto;border-radius:16px}
+  .lb-btn{position:absolute;top:10px;background:rgba(255,255,255,.9);border:none;border-radius:999px;padding:6px 12px;cursor:pointer}
+  .lb-close{right:10px} .lb-prev{left:10px;top:50%;transform:translateY(-50%)} .lb-next{right:10px;top:50%;transform:translateY(-50%)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap row">
+    <a href="#" style="font-weight:600;text-decoration:none;color:inherit">Zibo He｜Augmented & Virtual Reality · XR · HCI · Embedded</a>
+    <nav class="hide-sm">
+      <a href="#projects">Projects</a>
+      <a href="#videos">Video Demos</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Hero -->
+  <section class="section">
+    <h1>Augmented & Virtual Reality · XR/HCI</h1>
+    <p class="muted">增强现实、虚拟现实、XR/HCI</p>
+    <div class="mt-4">
+      <span class="tag">学习能力强（快速上手新栈）</span>
+      <span class="tag">自研能力出众</span>
+      <span class="tag">沟通效率高</span>
+      <span class="tag">注重团队协作</span>
+    </div>
+    <div class="mt-6 bar">
+      <a class="btn" href="#projects">查看项目</a>
+      <a class="btn secondary" href="#videos">观看演示</a>
+    </div>
+
+    <!-- 4 个项目预览卡 -->
+    <div class="grid g2 mt-6">
+      <div class="card"><div class="hd">🎮 VR 游戏《Recursive Breakout》</div><div class="bd muted">交互开发 / 核心玩法开发/测试｜2025.03–2025.07</div></div>
+      <div class="card"><div class="hd">🎚️ 沉浸式交互与音频《Echoes of the Witch’s Room》</div><div class="bd muted">交互 / 音频 / 测试｜2025.03–2025.07</div></div>
+      <div class="card"><div class="hd">📷 360° 全景《Introduction Bristol》</div><div class="bd muted">摄影 / 后期｜2024.10–2024.12</div></div>
+      <div class="card"><div class="hd">📦 虚拟环境设计（MVB 1.07）</div><div class="bd muted">3D 建模 / 渲染｜2024</div></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="sec-hd">
+      <h2>Projects</h2><a href="#projects">#projects</a>
+    </div>
+    <div class="grid g3">
+      <!-- 以下 7 个项目与原页面一致（图标改为emoji表现） -->
+      <div class="card"><div class="hd">🎮 VR 游戏《Recursive Breakout》</div><div class="bd">
+        <div class="muted">交互开发 / 核心玩法开发/测试｜2025.03–2025.07</div>
+        <p class="mt-2">免手柄的手势追踪（捏合-拉伸-释放）、球体生成/发射与对象池、手部物理交互与帧率优化。</p>
+        <div class="mt-2"><span class="badge">Unity 3D</span><span class="badge">OpenXR</span><span class="badge">XR Hands</span><span class="badge">C#</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-video-link.example/vr-demo" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">🎚️ 沉浸式交互与音频《Echoes of the Witch’s Room》</div><div class="bd">
+        <div class="muted">交互 / 音频 / 测试｜2025.03–2025.07</div>
+        <p class="mt-2">交互触发与事件系统；音频区域/优先级；混音平衡与声像；用例与回归测试。</p>
+        <div class="mt-2"><span class="badge">Unity 3D</span><span class="badge">Audio</span><span class="badge">Mixing</span><span class="badge">OpenXR</span><span class="badge">C#</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-video-link.example/echoes" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">📷 360° 全景沉浸式电影《Introduction Bristol》</div><div class="bd">
+        <div class="muted">摄影 / 后期｜2024.10–2024.12</div>
+        <p class="mt-2">全景采拍、拼接与地平线校正；DaVinci 调色与平台适配（8K/6K equirectangular）。</p>
+        <div class="mt-2"><span class="badge">Insta360</span><span class="badge">DaVinci</span><span class="badge">VR</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-video-link.example/360film" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">📦 虚拟环境设计（Merchant Venturers Building 1.07）</div><div class="bd">
+        <div class="muted">3D 建模 / 渲染｜2024</div>
+        <p class="mt-2">实景1:1建模还原；PBR/UV 与 Arnold 灯光渲染，输出高质量图集。</p>
+        <div class="mt-2"><span class="badge">Maya</span><span class="badge">Arnold</span><span class="badge">PBR</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-link.example/env-design" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">🧩 CPL 编译器</div><div class="bd">
+        <div class="muted">编译器设计与开发｜2023.01–2023.04</div>
+        <p class="mt-2">字符/字符串表/扫描器/符号表；语法语义检查与代码生成；Unix/Linux 测试。</p>
+        <div class="mt-2"><span class="badge">C/C++</span><span class="badge">Lexer</span><span class="badge">Parser</span><span class="badge">CodeGen</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-link.example/compiler" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">🎯 AR 游戏原型（Android，类“愤怒的小鸟”）</div><div class="bd">
+        <div class="muted">交互，建模，玩法与物理｜2025</div>
+        <p class="mt-2">准星与实体交互验证；准星在UI层级的有效拖拽与判定；移动端性能与交互响应。</p>
+        <div class="mt-2"><span class="badge">Unity 3D</span><span class="badge">AR</span><span class="badge">C#</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-video-link.example/ar-proto" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">🧠 舌眼交互（ESP32 + 眼动追踪）</div><div class="bd">
+        <div class="muted">硬件设计/开发/测试/通信｜2025.03–2025.09</div>
+        <p class="mt-2">ESP32-S3 平台与传感器集成；PCB 打样与焊接；Wi-Fi + WebSocket 低延迟链路；Unity/Quest 交互验证；提出舌眼多模态 VR 交互设备并进行用户研究，验证可行性。</p>
+        <div class="mt-2"><span class="badge">ESP32</span><span class="badge">Unity</span><span class="badge">FSR</span><span class="badge">C/C++</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-video-link.example/tongue" target="_blank">查看 Demo</a></div>
+      </div></div>
+
+      <div class="card"><div class="hd">🛠️ 嵌入式循迹小车/传感项目</div><div class="bd">
+        <div class="muted">硬件与控制/软件开发｜2024.05</div>
+        <p class="mt-2">电机驱动与红外传感集成；基础避障/循迹验证。</p>
+        <div class="mt-2"><span class="badge">PID</span></div>
+        <div class="mt-3"><a class="btn" href="https://your-video-link.example/robot" target="_blank">查看 Demo</a></div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- Video Demos（手动切换国内/Global） -->
+  <section id="videos" class="section">
+    <div class="sec-hd">
+      <h2>Video Demos</h2><a href="#videos">#videos</a>
+    </div>
+
+    <div class="bar mb-3">
+      <button class="btn" id="btn-cn">国内源</button>
+      <button class="btn secondary" id="btn-global">Global</button>
+      <span class="muted" id="hint"></span>
+    </div>
+
+    <div class="grid g3" id="video-grid"></div>
+  </section>
+
+  <!-- 3D Gallery + Lightbox -->
+  <section id="gallery" class="section">
+    <div class="sec-hd">
+      <h2>3D Gallery</h2><a href="#gallery">#gallery</a>
+    </div>
+
+    <div class="grid g3" id="gallery-grid"></div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lb-inner">
+        <img id="lb-img" class="lb-img" alt="preview"/>
+        <button class="lb-btn lb-close" id="lb-close">关闭</button>
+        <button class="lb-btn lb-prev" id="lb-prev">←</button>
+        <button class="lb-btn lb-next" id="lb-next">→</button>
+        <div id="lb-meta" style="margin-top:8px;color:#fff;opacity:.9"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Contact -->
+  <section id="about" class="section">
+    <div class="sec-hd"><h2>About</h2><a href="#about">#about</a></div>
+    <div class="grid g2">
+      <div class="card"><div class="hd">研究兴趣 / Interests</div><div class="bd">
+        <p>增强现实（AR）、虚拟现实（VR）、XR/HCI。</p>
+        <p>Augmented Reality (AR), Virtual Reality (VR), XR/HCI.</p>
+      </div></div>
+
+      <div class="card"><div class="hd">快速链接 / Links</div><div class="bd">
+        <div class="bar">
+          <a class="btn" target="_blank" href="https://github.com/SuGar-456">GitHub</a>
+          <a class="btn secondary" target="_blank" href="mailto:ne24584@bristol.ac.uk">Email</a>
+          <a class="btn secondary" target="_blank" href="https://scholar.google.com/">Google Scholar / Personal Site</a>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="sec-hd"><h2>Contact</h2><a href="#contact">#contact</a></div>
+    <div class="card"><div class="bd">
+      <p class="mb-3">欢迎联系我讨论博士申请、合作或项目演示。</p>
+      <div class="bar">
+        <a class="btn" target="_blank" href="mailto:ne24584@bristol.ac.uk">Email</a>
+        <a class="btn" target="_blank" href="https://github.com/SuGar-456">GitHub</a>
+        <a class="btn secondary" target="_blank" href="https://scholar.google.com/">Google Scholar</a>
+      </div>
+    </div></div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:64px;">
+    <span>© <span id="year"></span> Zibo He</span>
+    <a href="#" class="toplink" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
+  </div>
+</footer>
+
+<script>
+  // ----- 数据：与 React 版本保持一致 -----
+  const projects = []; // 已在上方静态渲染
+
+  const videos = [
+    {
+      title: "《Recursive Breakout》Promotional video",
+      cnSrc: "https://YOUR-WORKER.workers.dev/qiniu/VRgame_A.mp4",
+      globalSrc: "https://drive.google.com/file/d/1r_IG0YEmtU_z0t8z_xsg-sJtnYKJjmeR/preview",
+      poster: "images/vr_demo.jpg",
+      desc: "VR游戏 Recursive Breakout 宣传视频，目前该游戏暂未上架。"
+    },
+    {
+      title: "《Recursive Breakout》Actual machine demonstration (VR screen recording)",
+      cnSrc: "https://YOUR-WORKER.workers.dev/qiniu/vrgame.mp4",
+      globalSrc: "https://drive.google.com/file/d/1R_Z1JEpkM9NylP4kUasHU06nTM1LSSGO/preview",
+      poster: "images/echoes.jpg",
+      desc: "VR游戏 Recursive Breakout 实机演示，受限于VR内置录屏限制某些画面质量与特效展现不明显。"
+    },
+    {
+      title: "《Echoes of the Witch’s Room》",
+      cnSrc: "https://YOUR-WORKER.workers.dev/qiniu/Echoes%20of%20the%20Witch%27s%20Room.mov",
+      globalSrc: "https://drive.google.com/file/d/1XNL4mqf7aI9LkQ2XapNrBy9ahEFPIbEa/preview",
+      poster: "images/360.jpg",
+      desc: "VR游戏 Echoes of the Witch’s Room 实机演示，该项目专注于交互与音频设计，可以让没有音乐基础的人也能创造出听起来还不错的音乐。"
+    },
+  ];
+
+  const renders = [
+    {
+      title: "MVB 1.07 室内渲染",
+      desc: "Maya 1：1还原",
+      images: [
+        "renders/xuanran.jpg",
+        "renders/17.jpg",
+        "renders/11.jpg",
+        "renders/4.jpg",
+        "renders/12.jpg",
+        "renders/5.jpg",
+        "renders/7.jpg",
+        "renders/8.jpg",
+      ],
+    },
+  ];
+
+  // ----- 视频源切换（与 React 版本一致、记忆到 localStorage） -----
+  let pref = localStorage.getItem('pref') || 'cn';
+  const $btnCN = document.getElementById('btn-cn');
+  const $btnGL = document.getElementById('btn-global');
+  const $hint  = document.getElementById('hint');
+  function updatePrefUI(){
+    if(pref==='cn'){ $btnCN.classList.remove('secondary'); $btnGL.classList.add('secondary'); $hint.textContent='当前：国内源'; }
+    else{ $btnGL.classList.remove('secondary'); $btnCN.classList.add('secondary'); $hint.textContent='当前：Global 源'; }
+  }
+  $btnCN.onclick=()=>{ pref='cn'; localStorage.setItem('pref','cn'); updatePrefUI(); renderVideos(); };
+  $btnGL.onclick=()=>{ pref='global'; localStorage.setItem('pref','global'); updatePrefUI(); renderVideos(); };
+  updatePrefUI();
+
+  // ----- 渲染视频卡片 -----
+  const $videoGrid = document.getElementById('video-grid');
+  function isDrive(url){ return /https?:\/\/drive\.google\.com\/file\/d\/[^/]+\/preview/i.test(url); }
+  function renderVideos(){
+    $videoGrid.innerHTML='';
+    videos.forEach(v=>{
+      const url = (pref==='cn'? v.cnSrc : v.globalSrc) || v.cnSrc || v.globalSrc || '';
+      const card = document.createElement('div'); card.className='card';
+      const hd = document.createElement('div'); hd.className='hd'; hd.textContent = v.title;
+      const bd = document.createElement('div'); bd.className='bd';
+
+      if(!url){
+        bd.innerHTML = '<div class="muted">暂无可用源</div>';
+      }else if(isDrive(url)){
+        bd.innerHTML = `<div class="video" style="aspect-ratio:16/9">
+          <iframe src="${url}" allow="autoplay; fullscreen" allowfullscreen style="width:100%;height:100%;border:0"></iframe>
+        </div>`;
+      }else{
+        bd.innerHTML = `<video class="video" controls preload="metadata" poster="${v.poster||''}" playsinline oncontextmenu="event.preventDefault()">
+          <source src="${url}" type="video/mp4" />您的浏览器不支持 video 标签。
+        </video>`;
+      }
+      if(v.desc){ const p=document.createElement('p'); p.className='muted mt-2'; p.textContent=v.desc; bd.appendChild(p); }
+      card.appendChild(hd); card.appendChild(bd); $videoGrid.appendChild(card);
+    });
+  }
+  renderVideos();
+
+  // ----- 3D Gallery + Lightbox -----
+  const $gallery = document.getElementById('gallery-grid');
+  const $lb = document.getElementById('lightbox');
+  const $lbImg = document.getElementById('lb-img');
+  const $lbMeta= document.getElementById('lb-meta');
+  const $lbClose=document.getElementById('lb-close');
+  const $lbPrev=document.getElementById('lb-prev');
+  const $lbNext=document.getElementById('lb-next');
+  let gi=0, ii=0;
+
+  function renderGallery(){
+    $gallery.innerHTML='';
+    renders.forEach((grp,g)=>{
+      const card = document.createElement('div'); card.className='card';
+      const hd = document.createElement('div'); hd.className='hd'; hd.textContent = grp.title;
+      const bd = document.createElement('div'); bd.className='bd';
+
+      // 封面
+      const cover = document.createElement('button');
+      cover.style.cssText='display:block;width:100%;aspect-ratio:4/3;background:#eee;border:0;border-radius:12px;overflow:hidden;cursor:zoom-in';
+      cover.title='点击放大';
+      cover.onclick=()=>openLB(g,0);
+      cover.innerHTML = `<img src="${grp.images[0]}" alt="${grp.title} 封面" style="width:100%;height:100%;object-fit:cover">`;
+      bd.appendChild(cover);
+
+      // 描述
+      if(grp.desc){ const p=document.createElement('div'); p.className='muted mt-2'; p.textContent=grp.desc; bd.appendChild(p); }
+
+      // 缩略图
+      const thumbs=document.createElement('div'); thumbs.style.cssText='display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px';
+      grp.images.slice(0,4).forEach((src,i)=>{
+        const b=document.createElement('button'); b.style.cssText='aspect-ratio:1/1;background:#eee;border:0;border-radius:8px;overflow:hidden;cursor:zoom-in';
+        b.title='点击放大'; b.onclick=()=>openLB(g,i);
+        b.innerHTML=`<img src="${src}" alt="${grp.title} 预览 ${i+1}" style="width:100%;height:100%;object-fit:cover">`;
+        thumbs.appendChild(b);
+      });
+      bd.appendChild(thumbs);
+
+      card.appendChild(hd); card.appendChild(bd); $gallery.appendChild(card);
+    });
+  }
+  function openLB(g,i){
+    gi=g; ii=i; const grp=renders[gi]; $lbImg.src=grp.images[ii];
+    $lbMeta.textContent = `${grp.title} · ${ii+1}/${grp.images.length}`;
+    $lb.classList.add('open'); $lb.setAttribute('aria-hidden','false');
+  }
+  function closeLB(){ $lb.classList.remove('open'); $lb.setAttribute('aria-hidden','true'); }
+  function prevLB(){ if(ii>0){ ii--; openLB(gi,ii); } }
+  function nextLB(){ const grp=renders[gi]; if(ii<grp.images.length-1){ ii++; openLB(gi,ii); } }
+  $lb.addEventListener('click',(e)=>{ if(e.target===$lb) closeLB(); });
+  $lbClose.onclick=closeLB; $lbPrev.onclick=prevLB; $lbNext.onclick=nextLB;
+  renderGallery();
+
+  // 年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
